@@ -1,0 +1,66 @@
+.orbit-title {
+  margin: 0;
+  color: var(--g-text);
+  font-size: 18px;
+}
+
+.orbit-screen-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 20px;
+}
+
+.trajectory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.trajectory-title {
+  margin: 0;
+  color: var(--g-text);
+  font-size: 14px;
+}
+
+.courses-label {
+  margin: 0 0 12px;
+  color: var(--g-muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.add-course-card {
+  background: var(--g-bg-card);
+  padding: 16px;
+  border-radius: 14px;
+  border: 0.5px solid var(--g-border);
+}
+
+.add-course-title {
+  margin: 0 0 12px;
+  color: var(--g-text);
+  font-size: 12px;
+}
+
+.add-course-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-course-row {
+  display: flex;
+  gap: 8px;
+}
+
+.add-course-units,
+.add-course-grade {
+  flex: 1;
+}
+
+.add-course-btn {
+  margin-top: 8px;
+}

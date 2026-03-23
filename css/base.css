@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--g-bg);
+  color: var(--g-text);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100dvh;
+  background: var(--g-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.status-bar {
+  height: 28px;
+  padding: 8px var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--g-muted);
+}
+
+.top-bar {
+  height: 56px;
+  padding: 0 var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--g-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 0.5px solid var(--g-border);
+}
+
+.top-bar-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.top-bar-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--g-accent);
+  letter-spacing: -0.3px;
+}
+
+.top-bar-sub {
+  font-size: 11px;
+  color: var(--g-muted);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-circle);
+  background: var(--g-bg-raised);
+  border: 1.5px solid var(--g-border);
+  color: var(--g-accent);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.screen-body {
+  flex: 1;
+  padding: var(--sp-4) var(--sp-4) 80px;
+  overflow-y: auto;
+}
+
+.sec-hd {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--g-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: var(--sp-5) 0 var(--sp-2);
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--g-border2);
+  border-radius: var(--r-pill);
+}

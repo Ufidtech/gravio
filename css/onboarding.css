@@ -1,0 +1,19 @@
+/* ── ONBOARDING STEPS ── */
+.onb-step-content {
+  padding: 0 var(--sp-4) var(--sp-6);
+}
+
+.onb-level-select {
+  font-size: 14px;
+}
+
+.onb-scale-label {
+  margin-bottom: var(--sp-2);
+}
+
+.onb-remaining-hint {
+  font-size: 10px;
+  color: var(--g-muted);
+  margin-top: -8px;
+  margin-bottom: var(--sp-3);
+}

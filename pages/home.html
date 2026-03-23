@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravio — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <span class="top-bar-title">🪐 Gravio</span>
+          <span class="top-bar-sub" id="greeting">Good morning</span>
+        </div>
+        <div class="avatar" id="avatar">?</div>
+      </div>
+
+      <div class="screen-body">
+        <!-- STATE A: No semesters saved yet -->
+        <div id="state-empty" class="hidden">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-num" id="empty-cgpa">0.00</span>
+              <span class="stat-lbl">Current CGPA</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num am" id="empty-target">—</span>
+              <span class="stat-lbl">Target</span>
+            </div>
+          </div>
+
+          <!-- Orbit card: gentle prompt, no broken math -->
+          <div class="g-card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: var(--sp-2);
+              "
+            >
+              <span
+                style="
+                  font-size: 11px;
+                  font-weight: 700;
+                  color: var(--g-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 0.07em;
+                "
+                >Orbit status</span
+              >
+              <span class="badge badge-g">Ready</span>
+            </div>
+            <p style="font-size: 12px; color: var(--g-muted); line-height: 1.5">
+              Add your first semester in the Calculator to see your Orbit path
+              here.
+            </p>
+          </div>
+
+          <div class="sec-hd">Get started</div>
+          <div class="qa-grid">
+            <a class="qa-btn" href="calculator.html">
+              <span class="qa-ico">📊</span
+              ><span class="qa-txt">Add courses</span>
+            </a>
+            <a class="qa-btn" href="pledge.html">
+              <span class="qa-ico">🛡</span
+              ><span class="qa-txt">Write Pledge</span>
+            </a>
+          </div>
+
+          <div
+            style="
+              background: var(--g-bg-card);
+              border-radius: var(--r-card);
+              border: 0.5px solid var(--g-accent);
+              padding: var(--sp-3);
+              text-align: center;
+            "
+          >
+            <div
+              style="
+                font-size: 11px;
+                color: var(--g-accent);
+                font-weight: 700;
+                margin-bottom: 3px;
+              "
+            >
+              Start with the Calculator
+            </div>
+            <div
+              style="font-size: 11px; color: var(--g-muted); line-height: 1.4"
+            >
+              Add your courses and grades to see your live CGPA
+            </div>
+          </div>
+        </div>
+
+        <!-- STATE B: Has semester data -->
+        <div id="state-loaded" class="hidden">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-num" id="live-cgpa">—</span>
+              <span class="stat-lbl">Current CGPA</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num am" id="live-target">—</span>
+              <span class="stat-lbl">Target</span>
+            </div>
+          </div>
+
+          <!-- Orbit summary card -->
+          <div class="g-card" id="orbit-card">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: var(--sp-2);
+              "
+            >
+              <span
+                style="
+                  font-size: 11px;
+                  font-weight: 700;
+                  color: var(--g-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 0.07em;
+                "
+                >Orbit status</span
+              >
+              <span class="badge" id="orbit-badge">—</span>
+            </div>
+            <p
+              style="
+                font-size: 12px;
+                color: var(--g-muted);
+                margin-bottom: var(--sp-3);
+              "
+              id="orbit-need-text"
+            >
+              —
+            </p>
+            <div class="pbar-track">
+              <div class="pbar-fill" id="pbar-fill"></div>
+            </div>
+            <div class="pbar-labels">
+              <span id="pbar-left">—</span>
+              <span id="pbar-right">—</span>
+            </div>
+          </div>
+
+          <!-- Active Pledge preview -->
+          <div id="pledge-section"></div>
+
+          <div class="sec-hd">Quick actions</div>
+          <div class="qa-grid">
+            <a class="qa-btn" href="calculator.html">
+              <span class="qa-ico">📊</span
+              ><span class="qa-txt">Calculator</span>
+            </a>
+            <a class="qa-btn" href="orbit.html">
+              <span class="qa-ico">🪐</span><span class="qa-txt">Orbit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <a class="nav-item active" href="home.html" data-nav="home">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span class="nav-lbl">Home</span>
+        </a>
+        <a class="nav-item" href="calculator.html" data-nav="calc">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          >
+            <rect x="2" y="3" width="20" height="14" rx="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
+          <span class="nav-lbl">Calc</span>
+        </a>
+        <a class="nav-item" href="orbit.html" data-nav="orbit">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          <span class="nav-lbl">Orbit</span>
+        </a>
+        <a class="nav-item" href="pledge.html" data-nav="pledge">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <span class="nav-lbl">Pledge</span>
+        </a>
+        <a class="nav-item" href="profile.html" data-nav="profile">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          >
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span class="nav-lbl">Profile</span>
+        </a>
+      </nav>
+    </div>
+
+    <script src="../js/classes/Course.js"></script>
+    <script src="../js/classes/Semester.js"></script>
+    <script src="../js/classes/Student.js"></script>
+    <script src="../js/classes/Pledge.js"></script>
+    <script src="../js/modules/storage.js"></script>
+    <script src="../js/modules/calculator.js"></script>
+    <script src="../js/modules/router.js"></script>
+    <script src="../js/pages/index.js"></script>
+  </body>
+</html>

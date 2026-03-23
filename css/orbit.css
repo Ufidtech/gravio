@@ -1,0 +1,57 @@
+/* ── EMPTY STATE BUTTON ── */
+.empty-state-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* ── ORBIT BIG CARD ── */
+.orbit-big-badge {
+  margin: var(--sp-2) 0;
+}
+
+/* ── DROPPED OVERLAY ── */
+.dropped-input-field {
+  margin-bottom: var(--sp-2);
+}
+
+.dropped-btn-row {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.dropped-btn-row .g-btn-dim {
+  flex: 1;
+}
+
+.dropped-btn-row .g-btn-d {
+  flex: 2;
+}
+
+.dropped-result-msg {
+  font-size: 12px;
+  color: var(--g-muted);
+  margin-top: var(--sp-3);
+  line-height: 1.5;
+  display: none;
+}
+
+/* ── PROGRESS BAR ── */
+.pbar-track {
+  margin-bottom: var(--sp-1);
+}
+
+.pbar-labels {
+  margin-bottom: var(--sp-4);
+}
+
+/* ── ACTION BUTTONS ── */
+.orbit-main-btn {
+  margin-bottom: var(--sp-2);
+}
+
+/* ── SCENARIO PANEL ── */
+.scenario-panel {
+  margin-top: var(--sp-4);
+}

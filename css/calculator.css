@@ -1,0 +1,17 @@
+/* ── NEW SEMESTER FORM ── */
+.new-sem-label-input {
+  margin-bottom: var(--sp-2);
+}
+
+.sem-btn-row {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.sem-btn-row .g-btn-dim {
+  flex: 1;
+}
+
+.sem-btn-row .g-btn-p {
+  flex: 2;
+}

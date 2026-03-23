@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravio — Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/onboarding.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- STEP 1 -->
+      <div id="step-1">
+        <div class="onb-hero">
+          <span class="onb-planet">🪐</span>
+          <div class="onb-ttl">Welcome to Gravio</div>
+          <div class="onb-sub">
+            Your academic command center.<br />3 quick steps to set you up.
+          </div>
+        </div>
+        <div class="onb-step-content">
+          <div class="step-dots">
+            <div class="sdot on"></div>
+            <div class="sdot"></div>
+            <div class="sdot"></div>
+          </div>
+          <div class="step-lbl">Step 1 of 3 — Who are you?</div>
+
+          <label class="field-label">Full name</label>
+          <input
+            class="g-inp"
+            id="s1-name"
+            type="text"
+            placeholder="e.g. Umar Farooq Ibrahim"
+          />
+          <div class="field-error" id="err-name">Name cannot be empty.</div>
+
+          <label class="field-label">Current level</label>
+          <select class="g-inp onb-level-select" id="s1-level">
+            <option value="">Select your level</option>
+            <option value="100">100 Level</option>
+            <option value="200">200 Level</option>
+            <option value="300">300 Level</option>
+            <option value="400">400 Level</option>
+            <option value="500">500 Level</option>
+          </select>
+
+          <label class="field-label">Department</label>
+          <input
+            class="g-inp"
+            id="s1-dept"
+            type="text"
+            placeholder="e.g. Computer Science"
+          />
+
+          <label class="field-label">University</label>
+          <input
+            class="g-inp"
+            id="s1-uni"
+            type="text"
+            placeholder="e.g. FUTMinna"
+          />
+
+          <label class="field-label onb-scale-label">Grading scale</label>
+          <div class="scale-grid" id="scale-grid">
+            <div
+              class="scale-opt on"
+              data-scale="5.0"
+              onclick="selectScale(this)"
+            >
+              <div class="scale-val">5.0</div>
+              <div class="scale-lbl">Nigerian</div>
+            </div>
+            <div class="scale-opt" data-scale="4.0" onclick="selectScale(this)">
+              <div class="scale-val">4.0</div>
+              <div class="scale-lbl">US scale</div>
+            </div>
+          </div>
+
+          <button class="g-btn g-btn-p" onclick="goStep(2)">Next →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div id="step-2" class="hidden">
+        <div class="onb-hero">
+          <span class="onb-planet">🪐</span>
+          <div class="onb-ttl">Where are you now?</div>
+          <div class="onb-sub">
+            Enter 0.00 if you haven't completed any semester yet.
+          </div>
+        </div>
+        <div class="onb-step-content">
+          <div class="step-dots">
+            <div class="sdot"></div>
+            <div class="sdot on"></div>
+            <div class="sdot"></div>
+          </div>
+          <div class="step-lbl">Step 2 of 3 — Where are you now?</div>
+
+          <label class="field-label">Current CGPA</label>
+          <input
+            class="g-inp"
+            id="s2-cgpa"
+            type="number"
+            placeholder="e.g. 3.75"
+            min="0"
+            step="0.01"
+          />
+          <div class="field-error" id="err-cgpa">
+            CGPA must be between 0 and your scale max.
+          </div>
+
+          <label class="field-label">Semesters completed</label>
+          <input
+            class="g-inp"
+            id="s2-sems"
+            type="number"
+            placeholder="e.g. 4"
+            min="0"
+            max="12"
+          />
+
+          <label class="field-label">Total credit units done</label>
+          <input
+            class="g-inp"
+            id="s2-units"
+            type="number"
+            placeholder="e.g. 96"
+            min="0"
+          />
+
+          <div class="btn-row">
+            <button class="g-btn g-btn-dim" onclick="goStep(1)">← Back</button>
+            <button class="g-btn g-btn-p" onclick="goStep(3)">Next →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div id="step-3" class="hidden">
+        <div class="onb-hero">
+          <span class="onb-planet">🪐</span>
+          <div class="onb-ttl">Almost there</div>
+          <div class="onb-sub">Set your target. This drives your Orbit.</div>
+        </div>
+        <div class="onb-step-content">
+          <div class="step-dots">
+            <div class="sdot"></div>
+            <div class="sdot"></div>
+            <div class="sdot on"></div>
+          </div>
+          <div class="step-lbl">Step 3 of 3 — Where are you going?</div>
+
+          <label class="field-label onb-scale-label">Target class</label>
+          <div class="tg-grid" id="tg-grid">
+            <div
+              class="tg-opt on"
+              data-target="4.50"
+              onclick="selectTarget(this)"
+            >
+              <div class="tg-name">First Class</div>
+              <div class="tg-val">CGPA ≥ 4.50</div>
+            </div>
+            <div class="tg-opt" data-target="3.50" onclick="selectTarget(this)">
+              <div class="tg-name">2nd Upper</div>
+              <div class="tg-val">CGPA ≥ 3.50</div>
+            </div>
+            <div class="tg-opt" data-target="2.40" onclick="selectTarget(this)">
+              <div class="tg-name">2nd Lower</div>
+              <div class="tg-val">CGPA ≥ 2.40</div>
+            </div>
+            <div class="tg-opt" data-target="1.50" onclick="selectTarget(this)">
+              <div class="tg-name">Pass</div>
+              <div class="tg-val">CGPA ≥ 1.50</div>
+            </div>
+          </div>
+
+          <label class="field-label">Semesters remaining</label>
+          <input
+            class="g-inp"
+            id="s3-remaining"
+            type="number"
+            value="4"
+            min="1"
+            max="12"
+          />
+          <div class="field-error" id="err-remaining">
+            Must be at least 1 semester.
+          </div>
+          <p class="onb-remaining-hint">
+            Pre-filled by your level. Adjust if needed.
+          </p>
+
+          <div class="btn-row">
+            <button class="g-btn g-btn-dim" onclick="goStep(2)">← Back</button>
+            <button class="g-btn g-btn-p" onclick="finish()">Let's go →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/classes/Course.js"></script>
+    <script src="../js/classes/Semester.js"></script>
+    <script src="../js/classes/Student.js"></script>
+    <script src="../js/classes/Pledge.js"></script>
+    <script src="../js/modules/storage.js"></script>
+    <script src="../js/pages/onboarding.js"></script>
+  </body>
+</html>

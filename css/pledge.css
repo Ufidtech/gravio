@@ -1,0 +1,80 @@
+/* ── PLEDGE INTRO TEXT ── */
+.pledge-intro-text {
+  font-size: 12px;
+  color: var(--g-muted);
+  margin-bottom: var(--sp-4);
+  line-height: 1.6;
+}
+
+/* ── ADD RULE LINK ── */
+.add-rule-link {
+  font-size: 12px;
+  color: var(--g-accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 0 var(--sp-4);
+  font-weight: 600;
+}
+
+.add-rule-icon {
+  font-size: 16px;
+}
+
+/* ── SIGN PLEDGE BUTTON ── */
+.sign-pledge-btn {
+  margin-top: var(--sp-2);
+}
+
+/* ── PAST PLEDGES LINK ── */
+.past-pledges-link {
+  margin-top: var(--sp-2);
+}
+
+/* ── SIGNED WHY SECTION ── */
+.signed-why-box {
+  background: var(--g-bg-card);
+  border-radius: var(--r-input);
+  border: 0.5px solid var(--g-border);
+  padding: var(--sp-3);
+  font-size: 12px;
+  color: var(--g-muted);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: var(--sp-3);
+}
+
+/* ── REVIEW SCORE CARD ── */
+.review-score-card {
+  text-align: center;
+  margin-bottom: var(--sp-3);
+}
+
+.review-score-num {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--g-accent);
+}
+
+.review-score-sub {
+  font-size: 11px;
+  color: var(--g-muted);
+  margin-top: 3px;
+}
+
+.review-encouragement {
+  font-size: 12px;
+  color: var(--g-muted);
+  margin-top: var(--sp-2);
+  font-style: italic;
+}
+
+/* ── PAST PLEDGES PANEL ── */
+.past-pledges-panel-wrapper {
+  margin-top: var(--sp-4);
+}
+
+.past-pledges-back-btn {
+  margin-top: var(--sp-2);
+}

@@ -1,0 +1,40 @@
+:root {
+  /* Backgrounds */
+  --g-bg: #0a2218;
+  --g-bg-card: #112b1e;
+  --g-bg-raised: #0f3525;
+
+  /* Borders */
+  --g-border: #1e4030;
+  --g-border2: #2a5040;
+
+  /* Brand */
+  --g-accent: #4ecca3;
+  --g-accent2: #2dbf8a;
+  --g-accent3: #1a9e6e;
+  --g-text: #e8f5f0;
+  --g-muted: #7ab89a;
+
+  /* Semantic */
+  --g-amber: #f5a623;
+  --g-ambg: #2a1a00;
+  --g-ambd: #3a2800;
+  --g-red: #e85555;
+  --g-rdbg: #2a0808;
+  --g-rdbd: #3a1010;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+
+  /* Radius */
+  --r-input: 10px;
+  --r-btn: 12px;
+  --r-card: 14px;
+  --r-pill: 999px;
+  --r-circle: 50%;
+}

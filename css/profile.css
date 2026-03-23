@@ -1,0 +1,52 @@
+/* ── PROFILE EDIT FORM ── */
+.profile-edit-form {
+  margin-top: var(--sp-3);
+  text-align: left;
+}
+
+.edit-level-select {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.edit-btn-row {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+.edit-btn-row .g-btn-dim {
+  flex: 1;
+}
+
+.edit-btn-row .g-btn-p {
+  flex: 2;
+}
+
+/* ── SETTINGS BUTTONS ── */
+.export-btn {
+  margin-bottom: var(--sp-2);
+}
+
+/* ── RESET CONFIRM CARD ── */
+.reset-confirm-strong {
+  color: var(--g-red);
+}
+
+.reset-input-field {
+  margin-top: 0;
+}
+
+.reset-btn-row {
+  display: flex;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+.reset-btn-row .g-btn-dim {
+  flex: 1;
+}
+
+.reset-btn-row .g-btn-d {
+  flex: 2;
+}
