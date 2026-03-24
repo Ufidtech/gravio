@@ -15,7 +15,7 @@ It combines four tools in one:
 
 - **📊 Live GPA Calculator** — Add courses and grades. Your semester GPA and cumulative CGPA recalculate on every keystroke, no button press needed.
 - **🪐 Orbit Planner** — The exact GPA you must average per remaining semester to graduate at your target class. Powered by a weighted quality-points formula.
-- **🛡️ The Pledge** — Write your academic commitments before semester starts. Sign them — they lock. Review them at the end of semester, kept or broken.
+- **🛡️ The Pledge** — Write your academic commitments before the semester starts. Sign them — they lock. Review them at the end of the semester, kept or broken.
 - **👤 Academic Profile** — Your complete semester history, color-coded by GPA strength. Export your data as JSON anytime.
 
 ---
@@ -180,10 +180,10 @@ These are planned for future versions — not in the MVP:
 
 ## About the Builder
 
-Built by **Umar Farooq Ibrahim Danjuma**  
+Built by **Ibrahim Danjuma**  
 300 Level · Computer Science · Federal University of Technology, Minna (FUTMinna)
 
-I built Gravio during my 300L year because I needed it and it didn't exist. The Orbit formula came from a real question I couldn't answer: *"If I work hard from today, can I still graduate with a First Class?"* Gravio answers that question.
+I built Gravio because I needed it and it didn't exist. The Orbit formula came from a real question I couldn't answer: *"If I work hard from today, can I still graduate with a First Class?"* Gravio answers that question.
 
 ---
 
